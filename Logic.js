@@ -50,7 +50,13 @@ Logic.init=function(){
         	Logic.closeDetilesHtml();
         	Logic.showDetileRight();
         }
+    });
+    //点击房东显示详细房东信息。
+    $(".detiles-master").click(function(){
+        Logic.closeDetilesHtml();
+        Logic.showMaster();
     })
+
 
 }
 Logic.closeAllList=function(){
@@ -68,6 +74,7 @@ Logic.closeDetilesHtml=function(){
 	$(".detiles").css('display','none');
 		Logic.closeDetileLeft();
 	Logic.closeDetileRight();
+    Logic.closeMaster();
 }
 Logic.showDetilesHtml=function(){
 	$(".detiles").css('display','block');
@@ -88,3 +95,11 @@ Logic.closeDetileRight=function(){
   $(".bg.detile-right").css('display','none');
 }
 //显示作业面
+//房东页面
+Logic.closeMaster=function(){
+  $(".bg.master").css('display','none');
+}
+
+Logic.showMaster=function(){
+  $(".bg.master").css('display','block');
+}
