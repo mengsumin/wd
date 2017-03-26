@@ -55,6 +55,22 @@ Logic.init=function(){
     $(".detiles-master").click(function(){
         Logic.closeDetilesHtml();
         Logic.showMaster();
+    });
+
+    //绑定返回首页
+    $(".button-back").click(function(){
+            Logic.closeDetilesHtml();
+            Logic.showIndexHtml();
+    });
+    //绑定查看图片交互
+    $(".button-check").click(function(){
+        Logic.closeDetilesHtml();
+        Logic.showLookingHtml();
+    })
+    //关闭查看图片
+    $(".close-img").click(function(){
+        Logic.closeDetilesHtml();
+        Logic.showDetilesHtml();
     })
 
 
@@ -63,18 +79,20 @@ Logic.closeAllList=function(){
 	$(".search-list").hide();
 }
 Logic.closeIndexHtml=function(){
-	$(".index").css('display','none');
+
 	$(".bg.index").css('display','none');
 
 }
 Logic.showIndexHtml=function(){
-	$(".index").css('display','block');
+    Logic.closeAllList();
+	$(".bg.index").css('display','block');
 }
 Logic.closeDetilesHtml=function(){
 	$(".detiles").css('display','none');
 		Logic.closeDetileLeft();
 	Logic.closeDetileRight();
     Logic.closeMaster();
+    Logic.closeLookingHtml();
 }
 Logic.showDetilesHtml=function(){
 	$(".detiles").css('display','block');
@@ -102,4 +120,13 @@ Logic.closeMaster=function(){
 
 Logic.showMaster=function(){
   $(".bg.master").css('display','block');
+}
+
+///查看图片页面
+
+Logic.showLookingHtml=function(){
+    $(".lookingBG").css('display','block');
+}
+Logic.closeLookingHtml=function(){
+    $('.lookingBG').css('display','none');
 }
