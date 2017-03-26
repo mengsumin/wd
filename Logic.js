@@ -25,6 +25,31 @@ Logic.init=function(){
     $(".search-example").click(function(){
     	Logic.closeIndexHtml();
     	Logic.showDetilesHtml();
+    });
+    //左翻页按钮绑定交互
+    $(".detiles-turn-left").click(function(){
+      var style=$(".bg.detile-right").css('display');
+        if(style=='block'){
+        	Logic.closeDetilesHtml();
+        	Logic.showDetilesHtml();
+        }
+        else{
+        	Logic.closeDetilesHtml();
+        	Logic.showDetileLeft();
+        }
+
+    });
+    //右翻页按钮绑定交互
+    $(".detiles-turn-right").click(function(){
+    	 var style=$(".bg.detile-left").css('display');
+        if(style=='block'){
+        	Logic.closeDetilesHtml();
+        	Logic.showDetilesHtml();
+        }
+        else{
+        	Logic.closeDetilesHtml();
+        	Logic.showDetileRight();
+        }
     })
 
 }
@@ -34,13 +59,32 @@ Logic.closeAllList=function(){
 Logic.closeIndexHtml=function(){
 	$(".index").css('display','none');
 	$(".bg.index").css('display','none');
+
 }
 Logic.showIndexHtml=function(){
 	$(".index").css('display','block');
 }
 Logic.closeDetilesHtml=function(){
 	$(".detiles").css('display','none');
+		Logic.closeDetileLeft();
+	Logic.closeDetileRight();
 }
 Logic.showDetilesHtml=function(){
 	$(".detiles").css('display','block');
+
 }
+///关闭/显示详情左页面
+Logic.showDetileLeft=function(){
+	$(".bg.detile-left").css('display','block');
+}
+Logic.showDetileRight=function(){
+    $(".bg.detile-right").css('display','block');
+}
+//关闭详情右页面
+Logic.closeDetileLeft=function(){
+  $(".bg.detile-left").css('display','none');
+}
+Logic.closeDetileRight=function(){
+  $(".bg.detile-right").css('display','none');
+}
+//显示作业面
