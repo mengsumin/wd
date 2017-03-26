@@ -1,0 +1,5 @@
+var  testJSON={};
+
+testJSON.citylist{
+
+}
