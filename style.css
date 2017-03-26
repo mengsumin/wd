@@ -5,6 +5,9 @@
   border: 0rem;
   list-style:none;
 }
+.hide{
+	display: none;
+}
 .box-sizing{
 	-moz-box-sizing: border-box; /*Firefox3.5+*/
 -webkit-box-sizing: border-box; /*Safari3.2+*/
@@ -15,10 +18,21 @@ box-sizing: border-box; /*W3C标准(IE9+，Safari5.1+,Chrome10.0+,Opera10.6+都�
 .clear:after{
 content:""; display:block;clear:both;
 }
-@media only screen and (max-width: 1080px), only screen and (max-device-width:1080px) {
  .fl{
 	float: left;
 }
+ .fr{
+	float: right;
+}
+.stronger-number{
+		font-family:'PingFangSC-Regular';
+font-size:1.6rem;;
+color:#f5d732;
+text-align:right;
+width: 1.7rem;
+}
+@media only screen and (max-width: 1080px), only screen and (max-device-width:1080px) {
+
 
 html {
 	width: 100%;
@@ -44,8 +58,10 @@ font-family: '微软雅黑';
 	position: relative;
 	color: #fff;
 	margin-bottom: 1rem;
+    padding-top: 1rem;
 
 }
+
 .search-bar-button{
 	background-image: url('./img/usein/search-bar-button.png');
 	background-repeat: no-repeat;
@@ -76,11 +92,44 @@ line-height: 3.4rem;
 width: 100%;
  
  }
+
+ /*indext。htmlcss*/
+ .search-example{
+ 	width: 32rem;
+ 	height: 21rem;
+ 	margin:0 auto;
+ 	background-color: white;	
+ }
+ .search-example-title{
+ 		height: 3rem;
+ 		line-height: 3rem;
+ 		font-size: 1.5rem;
+ 		margin-top: 1.5rem;
+ }
+ .search-example-img{
+ 	width: 15rem;
+ 	height: 15rem;
+ 	margin-top: 1rem;
+ 	margin-left: 1rem;
+ }
+ .search-example-img>img{
+ 	width: 100%;
+ 	height: 100%;
+ }
+ .search-example-list{
+ 	margin-top: 1rem;
+ 	margin-left: 1rem;
+ }
+ .search-example-list>li{
+ 	height: 3rem;
+ 	line-height: 3rem;
+ }
  .bg-cover{width: 100%;height: 100%;}
 /*房东详情页css*/
 .detiles-button{
-	padding-top: 1rem;
-	padding-bottom: 2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 4rem;
+	height: 3rem;
 
 }
 .detiles-button>button{
@@ -115,11 +164,12 @@ font-weight: bold;
 
 }
 .detiles-master{
-	margin-top: 2rem;
+
      background-color: gray;
      opacity: 0.7;
 width: 30rem;	
 margin:0 auto;
+
 }
 .master-head-img{
 	width: 6rem;
@@ -150,6 +200,88 @@ margin:0 auto;
 	background-color: white;
 	margin-top:2rem;
 }
+/*dtileLeft css*/
+.detiles-warps{
+	padding:1rem;
+	width: 30rem;
+	height: 36.3rem;
+	margin:0 auto;
+	border-radius: 0.8rem;
+	opacity:0.94;
+background-image:radial-gradient(100% 0%, #dedede 0%, #ffffff 100%);
+border-radius:8px;
+width:299px;
+height:363px;
+margin-top: 10rem;
+}
+.furniture-icon{
+
+}
+.furniture-text{
+	
+	font-family:'PingFangSC-Regular';
+font-size:1.6rem;
+color:#999999;
+text-align:center;
+
+}
+.furniture-select{
+	
+}
+.furniture-select, .furniture-icon, .furniture-text{
+	display: inline-block;
+	width: 3rem;
+	height: 1rem;
+}
+.detiles-warps-distance{	
+	margin-top: 2rem;
+}
+.detiles-warps-distance>li{
+	margin-top: 0.5rem;
+}
+.distance-name{}
+.distance-way{
+	width: 6rem;
+	height: 2rem;
+}
+.distance-way, .distance-name{
+	font-family:'PingFangSC-Regular';
+font-size:1.6rem;
+color:#597094;
+text-align:left;
+}
+.distance-time{
+
+}
+.distance-time>em{
+	font-family:'PingFangSC-Regular';
+font-size:1.6rem;;
+color:#f5d732;
+text-align:right;
+width: 1.7rem;
+}
+.distance-icon{
+
+}
+.detiles-turn-right{
+	position: fixed;
+background:rgba(153,153,153,0.60);
+width:8.3rem;
+height:8.8rem;
+border-radius:100%;
+right: -2rem;
+top:50%;
+}
+.detiles-turn-left{
+	position: fixed;
+background:rgba(153,153,153,0.60);
+width:8.3rem;
+height:8.8rem;
+border-radius:100%;
+left: -2rem;
+top:50%;
+}
+
 
 }
 

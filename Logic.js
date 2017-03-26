@@ -1,0 +1,46 @@
+var Logic={};
+Logic.init=function(){
+	//显示初始化页面
+    //绑定动态搜索下拉框
+    //城市下拉列表
+    $(".search-bar-button.city").click(function(){
+    	Logic.closeAllList();
+    	$(".search-list.city-list").toggle();
+    });
+    //选择人数绑定事件
+        $(".search-bar-button.people").click(function(){
+    	Logic.closeAllList();
+    	$(".search-list.people-list").toggle();
+    });
+    //排序列表
+        $(".search-bar-button.default").click(function(){
+    	Logic.closeAllList();
+    	$(".search-list.default-list").toggle();
+    });
+    //选择具体下拉框列表交互
+    $(".search-list").click(function(){
+        Logic.closeAllList();
+    });
+    //点击查看具体详情交互
+    $(".search-example").click(function(){
+    	Logic.closeIndexHtml();
+    	Logic.showDetilesHtml();
+    })
+
+}
+Logic.closeAllList=function(){
+	$(".search-list").hide();
+}
+Logic.closeIndexHtml=function(){
+	$(".index").css('display','none');
+	$(".bg.index").css('display','none');
+}
+Logic.showIndexHtml=function(){
+	$(".index").css('display','block');
+}
+Logic.closeDetilesHtml=function(){
+	$(".detiles").css('display','none');
+}
+Logic.showDetilesHtml=function(){
+	$(".detiles").css('display','block');
+}

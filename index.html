@@ -1,44 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<meta content="yes" name="apple-mobile-web-app-capable" />
-	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-	<meta content="telephone=no" name="format-detection" />
-	<meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
 </head>
+
 <body>
+    <div class="bg box-sizing  index">
+        <!-- <img class='bg-img' src='./img/usein/search-bg.png'> -->
+        <ul class="search-bar clear box-sizing index">
+            <li class="search-bar-button fl city">选择城市</li>
+            <li class="search-bar-button fl people">选择人数</li>
+            <li class="search-bar-button fl default">默认排序</li>
+        </ul>
+        <ul class='search-list clear box-sizing hide people-list index'>
+            <li class="search-list-button">1人</li>
+            <li class="search-list-button">2人</li>
+            <li class="search-list-button">1人</li>
+            <li class="search-list-button">2人</li>
+            <li class="search-list-button">1人</li>
+            <li class="search-list-button">2人</li>
+            <li class="search-list-button">7人及以上</li>
+        </ul>
+        <ul class='search-list clear box-sizing hide city-list index'>
+            <li class="search-list-button">东京</li>
+            <li class="search-list-button">大阪</li>
+            <li class="search-list-button">京都</li>
+            <li class="search-list-button">名古屋</li>
+            <li class="search-list-button">北海道</li>
+            <li class="search-list-button">冲绳</li>
+            <li class="search-list-button">其它</li>
+        </ul>
+        <ul class='search-list clear box-sizing hide default-list index'>
+            <li class="search-list-button">默认排序</li>
+            <li class="search-list-button">价格最低</li>
+            <li class="search-list-button">交通最便捷</li>
+        </ul>
+        <div class='search-example clear index'>
+            <div class="search-example-title">
+                <span>东京近浅草-室屋</span>
+                <span>CNY  <em class="stronger-number">150</em></span>
+            </div>
+            <div class="search-example-brief">
+                <div class='fl search-example-img'>
+                    <img src="./img/usein/search-example.png">
+                </div>
+                <ul class='fl search-example-list'>
+                    <li>
+                        <i></i>
+                        <span>整套</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>最多四人</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>1一个房间</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>2张床</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>1个卫生间</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bg box-sizing detiles box-sizing">
+        <div class="detiles-button clear detiles box-sizing">
+            <button class="button-back">返回首页</button>
+            <button class="button-check">查看图片</button>
+        </div>
+        <div class='detiles-master clear detiles box-sizing'>
+            <div class='master-head-img'></div>
+            <div class="master-head-name">房东微信昵称</div>
+            <div>返回</div>
+        </div>
+        <div class='detiles-example detiles box-sizing'>
+            <div class="detiles-example-title">东京浅草一室屋</div>
+            <ul class='detiles-example-devices'>
+                <li>
+                    <em class='detiles-example-devices-img'></em>
+                    <span class="detiles-example-devices-text">
+                            整套
+                         </span>
+                </li>
+                <li>
+                    <em class='detiles-example-devices-img'></em>
+                    <span class="detiles-example-devices-text">
+                            最多四人
+                         </span>
+                </li>
+                <li>
+                    <em class='detiles-example-devices-img'></em>
+                    <span class="detiles-example-devices-text">
+                            一个房间
+                         </span>
+                </li>
+                <li>
+                    <em class='detiles-example-devices-img'></em>
+                    <span class="detiles-example-devices-text">
+                            2张床
+                         </span>
+                </li>
+                <li>
+                    <em class='detiles-example-devices-img'></em>
+                    <span class="detiles-example-devices-text">
+                            1个卫生间
+                         </span>
+                </li>
+            </ul>
+            <div>装修精致的一室户，非常合适情侣入住，距离市中心步行仅需10分钟
+                <div>
+                    <ul class='detiles-price'>
+                        <li class='detiles-price-lowest'>
+                            <span>淡季最低价：<span>
+                        <em>CNY 150</em>
+                    </li>
+                    <li class='detiles-price-heighest'>
+                    <span>淡季最低价：<span>
+                        <em>CNY 250</em>
+                    </li>
 
-<div class="bg box-sizing">
-<!-- <img class='bg-img' src='./img/usein/search-bg.png'> -->
-	<ul class="search-bar clear box-sizing">
-		<li class="search-bar-button fl">选择城市</li>
-		<li class="search-bar-button fl">选择人数</li>
-		<li class="search-bar-button fl">默认排序</li>
-	</ul>
-	<ul class='search-list clear box-sizing'>
-		<li class="search-list-button">1人</li>
-		<li class="search-list-button">2人</li>
-		<li class="search-list-button">1人</li>
-		<li class="search-list-button">2人</li>
-		<li class="search-list-button">1人</li>
-		<li class="search-list-button">2人</li>
-		<li class="search-list-button">7人及以上</li>
-	</ul>
-	<div class='search-example'>
-		<div>
-			<span>东京近浅草-室屋</span>
-			<span>CNY  150</span>
-
-		</div>
-	</div>
-
-</div>
-
-  <script src='./zepto.js'></script>
-
+                </ul>
+          </div>
+    </div>
+    <div class='detiles-turn-left detiles'>
+    </div>
+    <div class='detiles-turn-right detiles'>        
+    </div>
+    <!--js库-->
+    <script src='./jquery.js'></script>
+     <!--显示层-->
+    <script src='./Global.js'></script>
+     <!--控制层-->
+    <script src='./Logic.js'></script>
+     <!--逻辑层-->
+    <script type="text/javascript">
+        Logic.init();
+        Logic.closeDetilesHtml();
+    </script>
 </body>
+
 </html>
