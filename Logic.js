@@ -75,6 +75,10 @@ Logic.init=function(){
 
 
 }
+
+//绑定搜索按钮的交互。点击下拉框，显示到相应按钮
+
+
 Logic.closeAllList=function(){
 	$(".search-list").hide();
 }

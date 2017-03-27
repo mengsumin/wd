@@ -1,5 +1,5 @@
 var  testJSON={};
 
-testJSON.citylist{
+testJSON.citylist={
 
 }
