@@ -81,11 +81,11 @@
             <ul class='detiles-warps-right-second'>
                 <li>
                     <span class='yuyue-way'>房东微信</span>
-                    <span class='yuyue-value'>fangdongweixin</span>
+                    <span id='fangdongweixin' class='yuyue-value'>fangdongweixin</span>
                 </li>
                 <li>
                     <span class='yuyue-way'>平台微信客服</span>
-                    <span class='yuyue-value'>isbugkefu</span>
+                    <span id='weixinClient' class='yuyue-value' >isbugkefu</span>
                 </li>
                 <li>
                     <span class='yuyue-way'>官方微博</span>
@@ -160,25 +160,25 @@
             </div>
             <div class="short-jiange"></div>
             <ul class='detiles-warps-distance box-sizing'>
-                <li>
+                <li id='dtz'>
                     <i class="distance-icon ditiezhan"></i>
                     <em class="distance-name">地铁站</em>
                     <span class='distance-way'>步行</span>
                     <span class='distance-time'><em class="stronger-number">10</em>&nbsp;min</span>
                 </li>
-                <li>
+                <li id='dcz'>
                     <i class="distance-icon dianchezhan"></i>
                     <em class="distance-name">电车站</em>
                     <span class='distance-way'>步行</span>
                     <span class='distance-time'><em class="stronger-number" >10</em>&nbsp;min</span>
                 </li>
-                <li>
+                <li id='fjc'>
                     <i class="distance-icon feijichang"></i>
                     <em class="distance-name">飞机场</em>
                     <span class='distance-way'>驾车</span>
                     <span class='distance-time'><em class="stronger-number">10</em>&nbsp;min</span>
                 </li>
-                <li>
+                <li id='jd'>
                     <i class="distance-icon jingdian"></i>
                     <em class="distance-name">景点</em>
                     <span class='distance-way'>地铁直达</span>
@@ -252,6 +252,7 @@
                 </ul>
             </div>
         </div>
+
     </div>
     <div class="bg box-sizing detiles box-sizing">
         <div class='detiles-turn-left detiles'>
@@ -332,6 +333,8 @@
     <script type="text/javascript">
     Logic.init();
     Logic.closeDetilesHtml();
+    $(".bg.index").append(Global.CreateSearchExample(arrSearchJSON[0]))
+   // Global.ClearAllSearchExample();
     </script>
 </body>
 

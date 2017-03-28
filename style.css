@@ -4,6 +4,10 @@
                                 border: 0rem;
                                 list-style: none;
                             }
+                            .bg{
+                                overflow: scroll;
+                                overflow-x: hidden;
+                            }
                             body,html{
                                 width: 33rem;
                                 height: 100%;

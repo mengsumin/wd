@@ -21,8 +21,10 @@ Logic.init=function(){
     $(".search-list").click(function(){
         Logic.closeAllList();
     });
-    //点击查看具体详情交互
-    $(".search-example").click(function(){
+    //点击查看具体详情交互Global.CreateNode()
+    $(".bg.index").on("click","div",function(){
+        Global.askDetileData={};
+        Global.post(url,Global.askDetileData,Global.SetDetile);
     	Logic.closeIndexHtml();
     	Logic.showDetilesHtml();
     });
@@ -66,12 +68,28 @@ Logic.init=function(){
     $(".button-check").click(function(){
         Logic.closeDetilesHtml();
         Logic.showLookingHtml();
-    })
+    });
     //关闭查看图片
     $(".close-img").click(function(){
         Logic.closeDetilesHtml();
         Logic.showDetilesHtml();
-    })
+    });
+    //绑定点击下拉框选中并显示，同时赋值
+    $("ul.people-list").on("click","li",function(event){
+       Global.askSearchData.people=$(event.target).text();
+       $(".search-bar-button.people").html(Global.askSearchData.people);
+       Global.ReLoadIndex();
+    });
+    $("ul.city-list").on("click","li",function(event){
+       Global.askSearchData.city=$(event.target).text();
+       $(".search-bar-button.city").html(Global.askSearchData.city);
+        Global.ReLoadIndex();
+    });
+    $("ul.default-list").on("click","li",function(event){
+       Global.askSearchData.order=$(event.target).text();
+       $(".search-bar-button.default").html(Global.askSearchData.order);
+        Global.ReLoadIndex();
+    });
 
 
 }
